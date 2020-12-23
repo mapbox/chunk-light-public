@@ -96,6 +96,7 @@ function preset(api, opts) {
         // This is probably a fine default to help trim down bundles when
         // end-users inevitably import '@babel/polyfill'.
         useBuiltIns: 'entry',
+        corejs: 2,
         // Do not transform modules to CJS
         modules: false,
         // mapboxgl doesn't work without this.
