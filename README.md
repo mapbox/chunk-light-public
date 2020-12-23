@@ -255,7 +255,7 @@ const minimizeJs = require('./minimize-js');
 
 module.exports = async mode => {
   // read an external script, which we will inline
-  let inlineJs = await promisify(fs.readFile)('./path/to/some-script.js');
+  let inlineJs = await promisify(fs.readFile)('./path/to/some-script.js', 'utf8');
 
   if (mode === 'production') {
     inlineJs = minimizeJs(inlineJs);
@@ -326,7 +326,7 @@ npx underreact start --mode=production
 
 ## Babel
 
-Out of the box Underreact doesn't require you to setup a `babel.config.js` file. It uses [`@mapbox/babel-preset-mapbox`](https://github.com/mapbox/underreact/tree/next/packages/babel-preset-mapbox) internally to provide a top-notch default configuration.
+Out of the box Underreact doesn't require you to setup a `babel.config.js` file. It uses [`@mapbox/babel-preset-mapbox`](https://github.com/mapbox/underreact/tree/master/packages/babel-preset-mapbox) internally to provide a top-notch default configuration.
 
 ### Exposing `babel.config.js`
 
@@ -343,7 +343,7 @@ module.exports = {
 };
 ```
 
-While you are free to use any Babel presets & plugins, we strongly recommend that you use `@mapbox/babel-preset-mapbox`, as it provides a good combination of presets and plugins that are necessary for any Underreact application to work properly. For more advanced configuration visit [the documentation for `@mapbox/babel-preset-mapbox`](https://github.com/mapbox/underreact/tree/next/packages/babel-preset-mapbox).
+While you are free to use any Babel presets & plugins, we strongly recommend that you use `@mapbox/babel-preset-mapbox`, as it provides a good combination of presets and plugins that are necessary for any Underreact application to work properly. For more advanced configuration visit [the documentation for `@mapbox/babel-preset-mapbox`](https://github.com/mapbox/underreact/tree/master/packages/babel-preset-mapbox).
 
 **Note:** Underreact doesn't support `.babelrc`; please use `babel.config.js`. (Read more about the difference [here](https://babeljs.io/docs/en/config-files)).
 
@@ -489,7 +489,7 @@ Enable hot module reloading of Underreact. Read ["How do I enable hot module rel
 
 ### htmlSource
 
-Type: `string`\|`Promise<string>`\|`Function<string | Promise<string>>`. Default:[see the default HTML](https://github.com/mapbox/underreact/blob/next/lib/default-html.js).
+Type: `string`\|`Promise<string>`\|`Function<string | Promise<string>>`. Default:[see the default HTML](https://github.com/mapbox/underreact/blob/master/lib/default-html.js).
 
 The HTML template for your app, or a Promise that resolves to it. Read ["Defining your HTML"](#defining-your-html) for more details.
 
