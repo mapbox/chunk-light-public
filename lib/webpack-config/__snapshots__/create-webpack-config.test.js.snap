@@ -29,14 +29,14 @@ Object {
           },
           Object {
             "exclude": Array [
-              /\\[\\\\/\\\\\\\\\\\\\\\\\\]node_modules\\[\\\\/\\\\\\\\\\\\\\\\\\]/,
+              /\\[/\\\\\\\\\\\\\\\\\\]node_modules\\[/\\\\\\\\\\\\\\\\\\]/,
             ],
             "loader": "<PROJECT_ROOT>/node_modules/babel-loader/lib/index.js",
             "options": Object {
               "babelrc": false,
               "cacheCompression": false,
               "cacheDirectory": true,
-              "cacheIdentifier": "{\\"babel-loader\\":\\"8.0.2\\",\\"@babel/core\\":\\"7.1.2\\",\\"babelConfig\\":\\"\\",\\"env\\":\\"test\\",\\"browserslist\\":[\\"and_chr 67\\",\\"and_uc 11.8\\",\\"android 4.4.3-4.4.4\\",\\"android 4.4\\",\\"chrome 68\\",\\"chrome 67\\",\\"chrome 66\\",\\"chrome 65\\",\\"chrome 63\\",\\"chrome 55\\",\\"chrome 49\\",\\"chrome 29\\",\\"edge 17\\",\\"edge 16\\",\\"firefox 61\\",\\"firefox 60\\",\\"firefox 52\\",\\"ie 11\\",\\"ios_saf 11.3-11.4\\",\\"ios_saf 11.0-11.2\\",\\"ios_saf 10.3\\",\\"ios_saf 10.0-10.2\\",\\"ios_saf 9.3\\",\\"opera 53\\",\\"safari 11.1\\",\\"safari 11\\",\\"safari 10.1\\",\\"samsung 6.2\\",\\"samsung 4\\"]}",
+              "cacheIdentifier": "{\\"babel-loader\\":\\"8.2.2\\",\\"@babel/core\\":\\"7.12.10\\",\\"babelConfig\\":\\"\\",\\"env\\":\\"test\\",\\"browserslist\\":[\\"and_chr 87\\",\\"and_ff 83\\",\\"and_uc 12.12\\",\\"chrome 87\\",\\"chrome 86\\",\\"chrome 85\\",\\"chrome 84\\",\\"chrome 49\\",\\"edge 87\\",\\"firefox 84\\",\\"firefox 83\\",\\"ie 11\\",\\"ios_saf 14.0-14.3\\",\\"ios_saf 13.4-13.7\\",\\"ios_saf 13.3\\",\\"ios_saf 12.2-12.4\\",\\"opera 72\\",\\"safari 14\\",\\"safari 13.1\\",\\"samsung 13.0\\",\\"samsung 12.0\\"]}",
               "compact": false,
               "configFile": false,
               "presets": Array [
@@ -52,7 +52,7 @@ Object {
               "babelrc": false,
               "cacheCompression": false,
               "cacheDirectory": true,
-              "cacheIdentifier": "{\\"babel-loader\\":\\"8.0.2\\",\\"@babel/core\\":\\"7.1.2\\",\\"babelConfig\\":\\"\\",\\"env\\":\\"test\\",\\"browserslist\\":[\\"and_chr 67\\",\\"and_uc 11.8\\",\\"android 4.4.3-4.4.4\\",\\"android 4.4\\",\\"chrome 68\\",\\"chrome 67\\",\\"chrome 66\\",\\"chrome 65\\",\\"chrome 63\\",\\"chrome 55\\",\\"chrome 49\\",\\"chrome 29\\",\\"edge 17\\",\\"edge 16\\",\\"firefox 61\\",\\"firefox 60\\",\\"firefox 52\\",\\"ie 11\\",\\"ios_saf 11.3-11.4\\",\\"ios_saf 11.0-11.2\\",\\"ios_saf 10.3\\",\\"ios_saf 10.0-10.2\\",\\"ios_saf 9.3\\",\\"opera 53\\",\\"safari 11.1\\",\\"safari 11\\",\\"safari 10.1\\",\\"samsung 6.2\\",\\"samsung 4\\"]}",
+              "cacheIdentifier": "{\\"babel-loader\\":\\"8.2.2\\",\\"@babel/core\\":\\"7.12.10\\",\\"babelConfig\\":\\"\\",\\"env\\":\\"test\\",\\"browserslist\\":[\\"and_chr 87\\",\\"and_ff 83\\",\\"and_uc 12.12\\",\\"chrome 87\\",\\"chrome 86\\",\\"chrome 85\\",\\"chrome 84\\",\\"chrome 49\\",\\"edge 87\\",\\"firefox 84\\",\\"firefox 83\\",\\"ie 11\\",\\"ios_saf 14.0-14.3\\",\\"ios_saf 13.4-13.7\\",\\"ios_saf 13.3\\",\\"ios_saf 12.2-12.4\\",\\"opera 72\\",\\"safari 14\\",\\"safari 13.1\\",\\"samsung 13.0\\",\\"samsung 12.0\\"]}",
               "compact": false,
               "configFile": false,
               "presets": Array [
@@ -129,6 +129,7 @@ Object {
         "options": Object {
           "cache": true,
           "cacheKeys": [Function],
+          "chunkFilter": [Function],
           "exclude": undefined,
           "extractComments": false,
           "include": undefined,
@@ -154,7 +155,7 @@ Object {
               "ecma": 8,
             },
           },
-          "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+          "test": /\\\\\\.m\\?js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
           "warningsFilter": [Function],
         },
       },
@@ -181,13 +182,21 @@ Object {
   "plugins": Array [
     AssetsWebpackPlugin {
       "options": Object {
+        "fileTypes": Array [
+          "js",
+          "css",
+        ],
         "filename": "assets.json",
         "fullPath": true,
+        "includeAllFileTypes": true,
+        "integrity": false,
+        "keepInMemory": false,
         "manifestFirst": true,
         "path": "<PROJECT_ROOT>/_site",
         "prettyPrint": false,
         "processOutput": [Function],
         "update": false,
+        "useCompilerPath": false,
       },
       "writer": [Function],
     },

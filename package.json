@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/underreact",
-  "version": "0.5.4",
+  "version": "0.6.0-dev.8",
   "description": "Minimal, extensible React app build system that you won't need to eject",
   "main": "index.js",
   "scripts": {
@@ -55,6 +55,7 @@
     "promise": "^8.0.1",
     "remark-preset-davidtheclark": "^0.10.0",
     "resolve-pkg": "^1.0.0",
+    "semver": "^7.3.4",
     "serve-handler": "^5.0.5",
     "serve-static": "^1.13.2",
     "source-map-url": "^0.4.0",
